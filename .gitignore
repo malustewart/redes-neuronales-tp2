@@ -1,4 +1,4 @@
-/desktop.ini
+*.ini
 /figs
 /venv
 /__pycache__
