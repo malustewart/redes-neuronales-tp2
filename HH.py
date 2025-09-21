@@ -88,8 +88,8 @@ def HH_standard(yk, params: HHParams):
     Iion1 = g_Na * m1**3 * h1 * (V1 - V_Na) + g_K * n1**4 * (V1 - V_K) + g_L * (V1 - V_L)
     Iion2 = g_Na * m2**3 * h2 * (V2 - V_Na) + g_K * n2**4 * (V2 - V_K) + g_L * (V2 - V_L)
 
-    Isyn1 = gsyn1 * s2 * (V1 - Vsyn1)
-    Isyn2 = gsyn2 * s1 * (V2 - Vsyn2)
+    Isyn1 = gsyn1 * s1 * (V1 - Vsyn1)
+    Isyn2 = gsyn2 * s2 * (V2 - Vsyn2)
 
     dyk = np.zeros(10)
     dyk[0] = (I - Isyn1 - Iion1) / params.C
