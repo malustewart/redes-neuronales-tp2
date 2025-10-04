@@ -17,7 +17,7 @@ def S(x):
     return np.heaviside(x,1)*x
 
 def WC(y, params: WCParams):
-    hi, he = y
+    he, hi = y
     dyk = np.zeros(2)
     dyk[0] = (-he + params.g_ee*S(he) - params.g_ei*S(hi) + params.I_e)/params.tau
     dyk[1] = (-hi + params.g_ie*S(he) - params.g_ii*S(hi) + params.I_i)/params.tau
